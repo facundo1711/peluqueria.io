@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sacar Turnos - Peluquería SSJ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 class="titulo">Peluquería SSJ</h1>
+    <nav class="menu">
+  <button onclick="window.location.href='Index.html'">Home</button>
+  <button onclick="window.location.href='productos.html'">Nuestros productos</button>
+  <button onclick="window.location.href='nosotros.html'">Nosotros</button>
+  <button onclick="window.location.href='contacto.html'">Contacto</button>
+  <button onclick="window.location.href='formulario.html'">Formulario</button>
+</nav>
+  </header>
+
+  <section class="turnos">
+    <h2>Sacar Turno</h2>
+    <form id="form-turnos" action="#" method="post">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="+54 9 264 1234567" required pattern="^\+?\d{7,15}$" />
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required />
+
+      <label for="servicio">Servicio:</label>
+      <select id="servicio" name="servicio" required>
+        <option value="" disabled selected>Selecciona un servicio</option>
+        <option value="corte">✂️ Corte de cabello</option>
+        <option value="coloracion">🎨 Coloración y mechas</option>
+        <option value="tratamientos">💆 Tratamientos capilares</option>
+      </select>
+
+      <label for="fecha">Fecha del turno:</label>
+      <input type="date" id="fecha" name="fecha" required min="<?php echo date('Y-m-d'); ?>" />
+
+      <label for="hora">Hora del turno:</label>
+      <input type="time" id="hora" name="hora" required min="09:00" max="19:00" />
+
+      <button type="submit" class="btn-enviar">Reservar turno</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Derechos reservados &copy; 2025 - Peluquería SSJ</p>
+  </footer>
+</body>
+</html>
+
