@@ -772,5 +772,160 @@ main {
 img, video { max-width: 100%; height: auto; }
 
 section { padding: 60px 20px; }
+/* ================================================= */
+/* 5. MEDIA QUERIES PARA RESPONSIVIDAD (AGREGADO) */
+/* ================================================= */
+
+/* Teléfonos Móviles (max-width: 576px) */
+@media (max-width: 576px) {
+  
+  .section-padding {
+    padding: 60px 0; 
+  }
+  
+  /* Títulos más grandes en móviles (2.4rem) */
+  .bienvenida h2,
+  .services h2,
+  .contacto h2,
+  .productos h2,
+  .equipo h2 {
+    font-size: 2.4rem !important; 
+    margin-bottom: 25px;
+  }
+
+  /* Altura del carrusel más grande en móviles (60vh) */
+  .hero-carousel .carousel-item { 
+    height: 60vh; 
+    min-height: 350px; 
+  }
+
+  .hero-carousel h5 {
+    font-size: 2.8rem; 
+  }
+
+  .hero-carousel p {
+    font-size: 1.1rem; 
+  }
+
+  /* Márgenes y ajustes para tarjetas en móvil */
+  .services .card,
+  .product-card,
+  .persona-card,
+  .how-it-works-card,
+  .brand-logo-container {
+    margin-bottom: 25px;
+  }
+
+  .product-card {
+    min-height: auto; 
+  }
+
+  .product-card img { 
+    height: 180px; 
+  }
+
+  .persona-card { 
+    padding: 20px;
+  }
+  .persona-card img { 
+    width: 90px; 
+    height: 90px; 
+  }
+  .persona-card h5 {
+    font-size: 1.2rem;
+  }
+
+  .form-container { 
+    padding: 25px; 
+  }
+
+  /* Logos en móvil */
+  .brand-logo-container {
+    padding: 20px;
+    min-height: 120px;
+  }
+  
+  .brand-logo {
+    max-width: 80px; 
+  }
+  
+  .brand-name {
+    font-size: 0.9rem;
+    min-height: 20px;
+  }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) and (min-width: 577px) {
+  
+  .section-padding {
+    padding: 70px 0; 
+  }
+  
+  /* Ajuste del carrusel para tablets (70vh) */
+  .hero-carousel .carousel-item { 
+    height: 70vh; 
+  }
+
+  /* Títulos principales grandes (2.8rem) */
+  .bienvenida h2,
+  .services h2,
+  .contacto h2,
+  .productos h2,
+  .equipo h2 {
+    font-size: 2.8rem !important; 
+  }
+  
+  .hero-carousel h5 {
+    font-size: 3.2rem; 
+  }
+  .hero-carousel p {
+    font-size: 1.3rem; 
+  }
+
+  .services .card,
+  .product-card,
+  .persona-card,
+  .how-it-works-card,
+  .brand-logo-container {
+    margin-bottom: 30px; 
+  }
+
+  .product-card img { 
+    height: 200px; 
+  }
+
+  .mvv-item-card { 
+    padding: 30px; 
+    min-height: auto; 
+  }
+
+  .brand-logo-container {
+    padding: 25px;
+  }
+  
+  .brand-logo {
+    max-width: 100px;
+  }
+  
+  .brand-name {
+    font-size: 1rem;
+  }
+}
+
+/* Laptops pequeños (max-width: 992px) */
+@media (max-width: 992px) and (min-width: 769px) {
+  
+  .hero-carousel .carousel-item { 
+    height: 65vh; 
+  }
+}
+
+/* Desktops/Laptops grandes (min-width: 1200px) - Utilizan los estilos base */
+@media (min-width: 1200px) {
+  .hero-carousel .carousel-item {
+    height: 70vh;
+  }
+}
 
 /* FIN DEL CSS RESPONSIVE */
